@@ -177,7 +177,7 @@ public class inputFrame1 extends JFrame {
 		in1.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		in1.setDefaultLookAndFeelDecorated(true);
 		in1.setTitle("Hello Lab11");
-		in1.setSize(300, 400);
+		in1.setSize(1260, 80);
 		in1.setVisible(true);
 
 	}
