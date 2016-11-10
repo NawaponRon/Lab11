@@ -16,6 +16,9 @@ public class inputFrame1 extends JFrame {
 	public inputFrame1() {
 		JButton but1 = new JButton("แปลงค่า");
 		but1.setSize(100, 100);
+		
+		JButton but2 = new JButton("แปลงค่า2");
+		but2.setSize(100, 100);
 
 		JLabel lb1 = new JLabel("Celsius");
 		getContentPane().add(lb1);
@@ -41,6 +44,33 @@ public class inputFrame1 extends JFrame {
 		JLabel lb6 = new JLabel("0");
 		getContentPane().add(lb6);
 
+
+		JLabel lb7 = new JLabel("   Foot   ");
+		getContentPane().add(lb7);
+
+		JTextField tx3 = new JTextField("");
+		tx3.setColumns(10);
+		getContentPane().add(tx3);
+
+		JLabel lb8 = new JLabel("   Meter   ");
+		getContentPane().add(lb8);
+		JLabel lb9 = new JLabel("0");
+		getContentPane().add(lb9);
+
+		JLabel lb10 = new JLabel("   Mater   ");
+		getContentPane().add(lb10);
+
+		JTextField tx4 = new JTextField("");
+		tx4.setColumns(10);
+		getContentPane().add(tx4);
+
+		JLabel lb11 = new JLabel("   Foot   ");
+		getContentPane().add(lb11);
+		JLabel lb12 = new JLabel("0");
+		getContentPane().add(lb12);
+		
+	
+
 		but1.addMouseListener(new MouseListener() {
 
 			@Override
@@ -55,6 +85,7 @@ public class inputFrame1 extends JFrame {
 				celsius1 = fahrenheitToCelsius(Double.parseDouble(degree));
 				NumberFormat formatter = new DecimalFormat("#0.000");
 				lb6.setText(formatter.format(celsius1));
+
 			}
 
 			@Override
@@ -79,6 +110,46 @@ public class inputFrame1 extends JFrame {
 		});
 		getContentPane().add(but1);
 
+		
+		but2.addMouseListener(new MouseListener() {
+
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				String degree;
+				double foot1, meter1;
+
+				degree = tx3.getText();
+				meter1 = footToMeter(Double.parseDouble(degree));
+				lb9.setText(Double.toString(meter1));
+
+				degree = tx4.getText();
+				foot1 = meterTofoot(Double.parseDouble(degree));
+				NumberFormat formatter1 = new DecimalFormat("#0.000");
+				lb12.setText(formatter1.format(foot1));
+			}
+
+			@Override
+			public void mouseEntered(MouseEvent e) {
+
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+
+			}
+
+			@Override
+			public void mousePressed(MouseEvent e) {
+
+			}
+
+			@Override
+			public void mouseReleased(MouseEvent e) {
+
+			}
+		});
+		getContentPane().add(but2);
+
 	}
 
 	public static double celsiusToFahrenheit(double celsius) {
@@ -87,6 +158,14 @@ public class inputFrame1 extends JFrame {
 
 	public static double fahrenheitToCelsius(double fahrenheit) {
 		return (5.0 / 9) * (fahrenheit - 32);
+	}
+
+	public static double footToMeter(double foot) {
+		return (0.305) * foot;
+	}
+
+	public static double meterTofoot(double meter) {
+		return (3.279) * meter;
 	}
 
 	public static void main(String[] args) {
