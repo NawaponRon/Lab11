@@ -17,9 +17,6 @@ public class inputFrame1 extends JFrame {
 		JButton but1 = new JButton("แปลงค่า");
 		but1.setSize(100, 100);
 		
-		JButton but2 = new JButton("แปลงค่า2");
-		but2.setSize(100, 100);
-
 		JLabel lb1 = new JLabel("Celsius");
 		getContentPane().add(lb1);
 
@@ -45,30 +42,6 @@ public class inputFrame1 extends JFrame {
 		getContentPane().add(lb6);
 
 
-		JLabel lb7 = new JLabel("   Foot   ");
-		getContentPane().add(lb7);
-
-		JTextField tx3 = new JTextField("");
-		tx3.setColumns(10);
-		getContentPane().add(tx3);
-
-		JLabel lb8 = new JLabel("   Meter   ");
-		getContentPane().add(lb8);
-		JLabel lb9 = new JLabel("0");
-		getContentPane().add(lb9);
-
-		JLabel lb10 = new JLabel("   Mater   ");
-		getContentPane().add(lb10);
-
-		JTextField tx4 = new JTextField("");
-		tx4.setColumns(10);
-		getContentPane().add(tx4);
-
-		JLabel lb11 = new JLabel("   Foot   ");
-		getContentPane().add(lb11);
-		JLabel lb12 = new JLabel("0");
-		getContentPane().add(lb12);
-		
 	
 
 		but1.addMouseListener(new MouseListener() {
@@ -110,7 +83,36 @@ public class inputFrame1 extends JFrame {
 		});
 		getContentPane().add(but1);
 
+
 		
+		JButton but2 = new JButton("แปลงค่า2");
+		but2.setSize(100, 100);
+
+		JLabel lb7 = new JLabel("   Foot   ");
+		getContentPane().add(lb7);
+
+		JTextField tx3 = new JTextField("");
+		tx3.setColumns(10);
+		getContentPane().add(tx3);
+
+		JLabel lb8 = new JLabel("   Meter   ");
+		getContentPane().add(lb8);
+		JLabel lb9 = new JLabel("0");
+		getContentPane().add(lb9);
+
+		JLabel lb10 = new JLabel("   Meter   ");
+		getContentPane().add(lb10);
+
+		JTextField tx4 = new JTextField("");
+		tx4.setColumns(10);
+		getContentPane().add(tx4);
+
+		JLabel lb11 = new JLabel("   Foot   ");
+		getContentPane().add(lb11);
+		JLabel lb12 = new JLabel("0");
+		getContentPane().add(lb12);
+		
+
 		but2.addMouseListener(new MouseListener() {
 
 			@Override
@@ -150,6 +152,7 @@ public class inputFrame1 extends JFrame {
 		});
 		getContentPane().add(but2);
 
+		
 	}
 
 	public static double celsiusToFahrenheit(double celsius) {
